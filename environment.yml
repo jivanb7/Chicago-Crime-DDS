@@ -1,0 +1,40 @@
+# environment.yml
+name: crime
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+
+  # notebooks + data
+  - jupyterlab
+  - ipykernel
+  - pandas
+  - numpy
+  - pyarrow
+  - matplotlib
+  - tqdm
+  - requests
+  - python-dotenv
+
+  # mongo
+  - pymongo
+  - dnspython
+
+  # spark local
+  - pyspark
+  - openjdk=17
+
+  # gcp helpers (optional for local dev, useful later)
+  - google-cloud-storage
+  - google-cloud-bigquery
+
+  - pip:
+      # airflow core
+      - apache-airflow==2.9.3
+
+      # airflow providers you will use
+      - apache-airflow-providers-google==10.21.0
+      - apache-airflow-providers-mongo>=4.0.0,<5.0.0
+      - apache-airflow-providers-apache-spark==5.0.0
+      - apache-airflow-providers-common-sql==1.18.0
