@@ -23,7 +23,6 @@ conda activate crime
 We use a **BigQuery public dataset**, exported to **Google Cloud Storage** as CSV shards.
 
 - Dataset: [bigquery-public-data.chicago_crime.crime](https://console.cloud.google.com/bigquery?ws=!1m5!1m4!4m3!1sbigquery-public-data!2schicago_crime!3scrime)
-- Local CSV Shard: [gs://airdata-bucket/dataset/chicago_crime_000000000000.csv](https://storage.cloud.google.com/airdata-bucket/dataset/chicago_crime_000000000000.csv)
 
 The dataset contains reported crime incidents in Chicago with attributes such as date, location, crime type, arrest status, and district.  
 
@@ -34,7 +33,7 @@ The dataset contains reported crime incidents in Chicago with attributes such as
 crime/
 │
 ├── dags/
-│   └── airflow_pipeline.py          # Orchestrates the full pipeline (run last)
+│   └── airflow_pipeline.py          # Orchestrates the full pipeline
 │
 ├── mongo_notebooks/
 │   ├── aadhya.ipynb                 # Mongo Aggregations
