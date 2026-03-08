@@ -5,7 +5,7 @@ from pyspark.sql import functions as F
 
 
 def build_spark(app_name: str) -> SparkSession:
-    uri = os.environ.get("MONGO_URI", "mongodb+srv://dbuser:2IpbYCFEWj5nij77@cluster0.xsanuz.mongodb.net/?appName=Cluster0")
+    uri = os.environ.get("MONGO_URI", "...")
     if not uri:
         raise RuntimeError("MONGO_URI env var is empty")
 
